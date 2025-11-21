@@ -5,7 +5,7 @@ This project helps you organize daily tasks with an easy and minimal UI.
 ---
 
 ## 🚀 Live Demo
-🔗 **View Project:** ()
+🔗 **View Project:** (https://pegahmobasheri.github.io/My-To-Do-List/)
 
 
 ---
