@@ -12,7 +12,7 @@ This project helps you organize daily tasks with an easy and minimal UI.
 
 ## 🖼️ Screenshot
 
-![App Screenshot](./screenshot.png)
+![App Screenshot](https://github.com/user-attachments/assets/a89f4061-91d1-4c81-be14-5fc344f89653)
 
 ---
 
