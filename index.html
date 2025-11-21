@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/stylesheet/main.css">
+    <title>Document</title>
+</head>
+
+<body class="w-full min-h-dvh bg-[#faf3ff] bg-[url(../img/back-none.webp)]">
+    <header
+        class="w-[95%] h-20 3xl:container 3xl:mx-auto border bg-[url(../img/pinkback.png)] mt-5 mx-auto  rounded-xl shad flex items-center justify-between lg:mt-7 xl:mt-9 ">
+        <h1 class="my-font uppercase text-[22px]  ms-5  md:text-[32px] lg:text-[45px] lg:ms-10">my to do
+            list</h1>
+
+        <div
+            class="w-[170px] h-10 bg-[url(../img/back-true.png)] border rounded-[50px] shad me-5 lg:me-10 flex items-center md:w-[220px] lg:w-[270px]">
+            <button class="w-[25px] h-[25px] flex justify-center items-center ms-2 me-1 *:text-[16px]"><i
+                    class="ri-search-line"></i></button>
+            <input type="search" class="_sch w-full h-8  text-[18px] lg:text-[22px] input-placeholder "
+                placeholder="search...">
+        </div>
+
+        <!-- search box /// -->
+    </header>
+    <main class="w-full min-h-dvh 3xl:container  3xl:mx-auto">
+        <div class="_frame w-[95%] mx-[2.5%] min-h-80  my-5 lg:my-7 xl:my-9 flex flex-wrap">
+            <div class="w-full h-auto  md:w-1/2 p-5">
+                <!-- line1  -->
+                <div
+                    class="w-full min-h-[50px] bg-[url(../img/orangeback.png)] flex items-center border rounded-xl shad px-5 ">
+                    <button class="_btn w-[25px] h-[25px] flex justify-center items-center me-2.5  *:text-[22px]"><i
+                            class="ri-add-box-line"></i> </button>
+                    <input class="_inp w-full h-10  text-[18px] md:text-[22px] lg:text-[28px] input-placeholder"
+                        type="text" placeholder="Add a new task...">
+                </div>
+                <nav class="w-full min-h-80 mt-5 ">
+                    <ul class="_todo w-full min-h-80 border rounded-xl shad bg-[url(../img/purpleback.png)]">
+
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="w-full h-auto  md:w-1/2 p-5">
+                <!-- line 2  -->
+                <h2
+                    class="w-full h-[50px] bg-[url(../img/yellowback.png)] flex items-center border rounded-xl shad px-5 my-font text-[18px] md:text-[22px] lg:text-[28px] capitalize">
+                    <i class="ri-check-double-line me-2.5 text-[22px]"></i>completed tasks
+                </h2>
+                <nav class="w-full min-h-80 mt-5 ">
+                    <ul class=" _done w-full min-h-80 border rounded-xl shad bg-[url(../img/greenback.png)]"></ul>
+                </nav>
+
+            </div>
+
+
+
+        </div>
+    </main>
+    <footer
+        class="w-[95%] h-[200px] lg:h-[220px] 3xl:container 3xl:mx-auto border bg-[url(../img/blueback.png)] mb-5 mx-auto rounded-xl shad flex items-center justify-center lg:mb-7 xl:mb-9 ">
+        <div class="w-full h-[180px] lg:h-[200px] flex justify-center items-center">
+            <figure class="w-fit h-fit ">
+                <img class="w-[120px] h-[120px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[150px] mx-auto border rounded-xl shad object-cover"
+                    src="assets/img/metur.crop.jpeg" alt="">
+                <figcaption
+                    class="w-fit h-fit mx-auto mt-3 uppercase my-font text-[14px] md:text-[16px] lg:text-[18px]">pegah
+                    mobasheri</figcaption>
+            </figure>
+            <nav class="w-fit h-fit flex justify-center items-center">
+                <ul class="w-fit h-fit">
+                    <li><a class="my-font uppercase text-[16px] md:text-[18px] lg:text-[20px]"
+                            href="https://www.instagram.com/pegahmobasherii"><i
+                                class="ri-instagram-line me-1 ms-3 md:me-2 md:ms-5 lg:ms-8"></i>instagram</a></li>
+                    <li><a class="my-font uppercase text-[16px] md:text-[18px] lg:text-[20px]"
+                            href="https://www.linkedin.com/in/pegah-mobasheri"><i
+                                class="ri-linkedin-line me-1 ms-3 md:me-2 md:ms-5 lg:ms-8"></i>linkedin</a></li>
+                    <li><a class="my-font uppercase text-[16px] md:text-[18px] lg:text-[20px]"
+                            href="https://github.com/PegahMobasheri"><i
+                                class="ri-github-line me-1 ms-3 md:me-2 md:ms-5 lg:ms-8"></i>github</a></li>
+                    <li><a class="my-font uppercase text-[16px] md:text-[18px] lg:text-[20px]"
+                            href="www.pegah.mobasheri222@gmail.com"><i
+                                class="ri-mail-line me-1 ms-3 md:me-2 md:ms-5 lg:ms-8"></i>email</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+
+
+</body>
+<script>
+    const _do = document.querySelector('._todo')
+    const done = document.querySelector('._done')
+    const inp = document.querySelector('._inp')
+    const btn = document.querySelector('._btn')
+    const _search = document.querySelector('._sch')
+    let arr = []
+
+
+    // add to do list local storage// 
+
+    // let x = JSON.parse(localStorage.getItem('data'))
+    // if (x != undefined) {
+    //     arr = [...x]
+    //     arr.forEach((item) => todogen(item))
+      
+    // }
+
+    // add to do list local storage// 
+
+
+
+  
+
+    btn.addEventListener('click', () => {
+
+        let tempval = inp.value
+        if (tempval == '') {
+            alert('please fill the box!')
+        } else {
+            todogen(tempval)
+            // added to list//
+            inp.value = null
+            inp.focus()
+            // reset input// 
+
+            // // local// 
+            // arr.push(tempval)
+            // localStorage.setItem('data', JSON.stringify(arr))
+            // // local// 
+        }
+    })
+
+
+
+    // delete//
+    function myDel(s) {
+        if (confirm('Are you sure?!')) {
+            s.parentElement.parentElement.remove()
+
+        }
+        // (confirm('Are you sure?!')) && s.parentElement.remove()
+    }
+
+    // delete//
+
+    // edit// 
+    function myEdit(s) {
+        s.classList.add('hide')
+        s.parentElement.previousElementSibling.classList.add('hide')
+        let mytext = s.parentElement.previousElementSibling.innerText
+        ////////////////////////////
+        s.parentElement.children[1].classList.add('hide')
+        s.parentElement.children[2].classList.add('hide')
+        s.parentElement.children[3].classList.add('hide')
+        //////////////////////////
+
+        s.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.classList.remove('hide')
+        s.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.value = mytext
+        s.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.focus()
+        s.parentElement.previousElementSibling.previousElementSibling.classList.remove('hide')
+        s.parentElement.parentElement.classList.remove('_li1')
+        s.parentElement.parentElement.classList.add('edit')
+
+    }
+
+
+
+    // edit// 
+
+    //  save// 
+    function _save(s) {
+
+        s.classList.add('hide')
+        s.previousElementSibling.classList.add('hide')
+        let mytext = s.previousElementSibling.value
+        ///////////////////////////////////////////////
+        s.nextElementSibling.classList.remove('hide')
+        s.nextElementSibling.innerText = mytext
+        ///////////////////////////
+        s.nextElementSibling.nextElementSibling.children[0].classList.remove('hide')
+        s.nextElementSibling.nextElementSibling.children[1].classList.remove('hide')
+        s.nextElementSibling.nextElementSibling.children[2].classList.remove('hide')
+        s.nextElementSibling.nextElementSibling.children[3].classList.remove('hide')
+        ////////////////////////////////////////
+        s.parentElement.classList.remove('edit')
+        s.parentElement.classList.add('_li1')
+
+         
+
+
+    }
+
+    //  save// 
+
+    //  add to done// 
+    function addtodone(s) {
+
+        let myclone = s.parentElement.previousElementSibling.innerText
+        s.parentElement.parentElement.remove()
+        ////////////////////
+        
+        const li = document.createElement('li')
+        li.innerHTML = `
+     <del class='inbox'>${myclone}</del>
+           <div>
+            <b onclick='returntodo(this)'><i class="ri-arrow-go-back-fill"></i></b>
+            <b onclick='myDel(this)'><i class="ri-delete-bin-7-line"></i></b>
+           </div>
+    
+    
+    `
+        done.appendChild(li)
+        li.classList.add('_li2')
+
+     
+       
+    }
+    
+
+    //  add to done// 
+
+
+    //   return to do// 
+
+    function returntodo(s) {
+
+        let _myclone = s.parentElement.previousElementSibling.innerText
+        s.parentElement.parentElement.remove()
+        todogen(_myclone)
+
+         
+    }
+
+
+
+    //   return to do// 
+
+
+    // generete to do function// 
+    function todogen(tempval) {
+        const li = document.createElement('li')
+        li.innerHTML = `
+             <input id='editinp' type="text" class="hide">
+              <button onclick='_save(this)' class="hide">Save</button>
+               <p class='inbox'>${tempval}</p>
+            
+             <div>
+                
+                  <b onclick='myEdit(this)'><i class="ri-pencil-line"></i></b>
+                    <b><i class="ri-pushpin-line"></i></b>
+                    <b onclick='myDel(this)'><i class="ri-delete-bin-7-line"></i></b>
+                    <input class='check' type='checkbox' onchange='addtodone(this)'>
+                    </div>
+                    
+                  
+                  
+
+            `
+        li.classList.add('_li1')
+        _do.appendChild(li)
+    }
+
+
+
+
+    // generete to do function// 
+
+
+
+   
+
+
+    
+
+
+
+    // search box// 
+    _search.addEventListener('keyup', (e) => {
+
+        let temp = e.target.value
+        const _para = document.querySelectorAll('.inbox')
+
+        _para.forEach((val) => {
+
+            if (
+                val.innerText.indexOf(temp) >= 0
+            ) {
+                val.parentElement.classList.remove('hide')
+
+            } else {
+                val.parentElement.classList.add('hide')
+            }
+        })
+    })
+
+
+
+    // search box// 
+
+
+
+
+
+</script>
+
+</html>

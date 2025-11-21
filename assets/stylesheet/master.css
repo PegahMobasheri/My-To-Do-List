@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('../fonts/remixicon.css');
+@import "tailwindcss";
+
+
+@layer utilities {
+  
+ .shad {
+        box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.9);
+    }
+
+
+}
+
+._li1{
+    border: 1px solid black;
+    box-shadow:  4px 4px 0px 0px rgba(0,0,0,0.9); 
+    border-radius: 12px; 
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
+    gap: 10px;
+    >p{
+        width: 100%;
+        height: auto;
+        white-space: normal;
+        overflow-wrap: break-word;
+       
+        /* for breaking  */
+    }
+    >div{
+        width: 140px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        >*{
+            font-size: 22px;
+        }
+        >.check{
+            width: 18px;
+            height: 18px;
+            
+        }
+        
+        
+    }
+}
+
+.edit {
+    border: 1px solid black;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.9);
+    border-radius: 12px;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+     padding: 10px;
+
+        >#editinp {
+            width:100%;
+            height: auto;
+           
+
+
+        }
+
+        >button {
+            width: 70px;
+            height: 30px;
+             border: 1px solid black;
+              box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.9);
+            border-radius: 12px;
+            font-family: "Rampart One", sans-serif;
+            font-size: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+        }
+    
+
+
+}
+
+/* /////////////////////////////////////////////  */
+
+._li2{
+    border: 1px solid black;
+    box-shadow:  4px 4px 0px 0px rgba(0,0,0,0.9); 
+    border-radius: 12px; 
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
+    gap: 10px;
+    >del{
+        width: 100%;
+        height: auto;
+        white-space: normal;
+        overflow-wrap: break-word;
+        color: rgb(90, 90, 90);
+       
+        /* for breaking  */
+    }
+    >div{
+        width: 80px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        >*{
+            font-size: 22px;
+        }
+        
+        
+    }
+}
+
+
+ 
+
+.hide {
+    display: none !important;
+}
+
+
+
+
+.input-placeholder::placeholder {
+    font-family: "Rampart One", sans-serif;
+    text-transform: capitalize;
+    
+}
+
+.my-font {
+    font-family: "Rampart One", sans-serif;
+
+}
+
+@font-face {
+    font-family: 'remixicon';
+    src: url(../fonts/remixicon.ttf) format('truetype');
+
+}
